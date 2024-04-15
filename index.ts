@@ -1,5 +1,6 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
+console.log("****** Welcome to Simple Calculator ******");
 
 const answer = await inquirer.prompt([
   { message: "Enter first number", type: "number", name: "firstNumber" },
@@ -24,3 +25,4 @@ if (answer.operator === "Addition") {
 } else {
   console.log("Please select valid operator")
 }
+console.log("------------ The End -----------");

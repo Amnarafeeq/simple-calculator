@@ -1,5 +1,6 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
+console.log("****** Welcome to Simple Calculator ******");
 const answer = await inquirer.prompt([
     { message: "Enter first number", type: "number", name: "firstNumber" },
     { message: "Enter second number", type: "number", name: "secondNumber" },
@@ -7,7 +8,7 @@ const answer = await inquirer.prompt([
         message: "Select one of the operators to perform operation",
         type: "list",
         name: "operator",
-        choices: ["Addition", "Subtraction", "Division", "Multiplication"],
+        choices: ["Addition", "Subtraction", "Division", "Multiplication",],
     },
 ]);
 // conditional statement
@@ -26,3 +27,4 @@ else if (answer.operator === "Division") {
 else {
     console.log("Please select valid operator");
 }
+console.log("------------ The End -----------");
